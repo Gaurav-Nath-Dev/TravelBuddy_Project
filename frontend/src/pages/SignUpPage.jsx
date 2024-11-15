@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom"
 import { motion } from "framer-motion";
 import travel_buddy_logo from "../../public/TravelBuddy_Logo.svg"
-import { Input } from "../components/input"
+import { Input } from "../components/Input"
 import { Loader, LockKeyholeIcon, Mail, User2, } from "lucide-react";
 import { PasswordStrengthMeter } from "../components/PasswordStrengthMeter";
 import { useAuthStore } from "../Store/authStore";

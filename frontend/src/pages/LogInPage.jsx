@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, Navigate, useNavigate } from "react-router-dom"
 import travel_buddy_logo from "../../public/TravelBuddy_Logo.svg"
-import { Input } from "../components/input"
+import { Input } from "../components/Input"
 import { Loader, LockKeyholeIcon, Mail } from "lucide-react";
 import { Transition } from "../components/Transition";
 import { motion } from "framer-motion";

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useNavigate, useParams, Link } from "react-router-dom";
 import travel_buddy_logo from "../../public/TravelBuddy_Logo.svg"
 import { Lock, Loader, ArrowLeft } from "lucide-react";
-import { Input } from "../components/input"
+import { Input } from "../components/Input"
 import toast from "react-hot-toast";
 import { useAuthStore } from "../Store/authStore";
 
