@@ -53,7 +53,6 @@ function App() {
 
   return(
     <div>
-      <Navbar />
       <Routes>
         <Route index element={<HomePage />} />
         <Route path="/signup" element={<RedirectAuthenticatedUser><SignUpPage /></RedirectAuthenticatedUser>} />

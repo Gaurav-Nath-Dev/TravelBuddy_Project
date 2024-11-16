@@ -32,7 +32,9 @@ export const SignUpPage = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         className=" absolute text-center rounded-3xl w-[25rem] h-fit bg-gray-100 bg-opacity-[.3] backdrop-blur-sm text-gray-500">
-        <img src={travel_buddy_logo} alt="" className="w-[8rem] mt-8 m-auto"/>
+        <Link to={"/"}>
+          <img src={travel_buddy_logo} alt="" className="w-[8rem] mt-8 m-auto"/>
+        </Link>
         <h1 className=" mt-4 text-4xl text-gray-700 font-playfair font-black">Create Account</h1>
         <p className="mt-1 text-sm">Please enter your details, Your Buddy awaits.</p>
         <form onSubmit={handleSignUp}>

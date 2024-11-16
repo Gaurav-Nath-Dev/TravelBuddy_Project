@@ -7,6 +7,7 @@ import { Transition } from "../components/Transition";
 import { motion } from "framer-motion";
 import { useAuthStore } from "../Store/authStore";
 import toast from "react-hot-toast";
+import { Navbar } from "../components/Navbar";
 
 export const LogInPage = () => {
 
@@ -32,7 +33,9 @@ export const LogInPage = () => {
       animate={{ opacity: 1, y:0 }}
       transition={{ duration: 0.5 }}
       >
-        <img src={travel_buddy_logo} alt="" className="w-[8rem] mt-8 m-auto"/>
+        <Link to={"/"}>
+          <img src={travel_buddy_logo} alt="" className="w-[8rem] mt-8 m-auto"/>
+        </Link>
         <h1 className=" mt-4 text-4xl text-gray-700 font-playfair font-black">Welcome Back!</h1>
         <p className="mt-1 text-sm">Please enter your details, Your Buddy awaits.</p>
         <form onSubmit={handleLogIn}>

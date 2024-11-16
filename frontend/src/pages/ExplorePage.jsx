@@ -2,12 +2,21 @@ import { Transition } from "../components/Transition";
 import { motion } from "framer-motion";
 import { useAuthStore } from "../Store/authStore";
 import { formatDate } from "../utils/date";
+import { Navbar } from "../components/Navbar";
+import { Post } from "../components/Post";
+import exploredata from "../utils/exploredata.json"
 
 export const ExplorePage = () => {
   const { user } = useAuthStore();
   return (
     <>
-      <motion.div
+      <Navbar />
+			<section className="grid mt-5 mx-5 grid-cols-2 md:grid-cols-4 gap-6">
+				{exploredata.map((post, index) => (
+					<Post Date={post.Date} buddy={post.buddy} from={post.from} to={post.to} />
+				))}
+			</section>
+      {/* <motion.div
 			initial={{ opacity: 0, scale: 0.9 }}
 			animate={{ opacity: 1, scale: 1 }}
 			exit={{ opacity: 0, scale: 0.9 }}
@@ -51,7 +60,7 @@ export const ExplorePage = () => {
 					</p>
 				</motion.div>
 			</div>
-		</motion.div>
+		</motion.div> */}
     </>
   );
 }
