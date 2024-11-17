@@ -1,4 +1,4 @@
-import { Menu } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import travel_buddy_logo from "../../public/TravelBuddy_Logo.svg"
 import { useEffect, useState } from "react"
 import { Link, useNavigate } from "react-router-dom";
@@ -42,7 +42,7 @@ export const Navbar = () => {
       <Link><img src={travel_buddy_logo} alt="" className="w-[16rem] min-w-[10rem]"/></Link>
       <div className="">
         {(isOpenNav) ?  
-        <ul className=" absolute mt-10 mx-7 left-0 bg-white text-center space-y-1 w-full gap-8">
+        <ul className="absolute h-[90svh] mt-10 left-0 bg-white text-center space-y-[5rem] w-full gap-8">
           <li className="hover:bg-gray-200 p-4 rounded-xl duration-500"><Link to={"/"}>Home</Link></li>
           <li className="hover:bg-gray-200 p-4 rounded-xl duration-500"><Link to={"/explore"} >Explore</Link></li>
           <li className="hover:bg-gray-200 p-4 rounded-xl duration-500"><Link to={"/my-trips"}>My Trips</Link></li>
@@ -97,7 +97,8 @@ export const Navbar = () => {
           </>
         }
         </div>
-        {openNav && (<Menu onClick={toggleNavDown} className="ml-5"/>)}
+        {/* {openNav && (<Menu onClick={toggleNavDown} className="ml-5"/>)} */}
+        {openNav && ((isOpenNav)? <X onClick={toggleNavDown} size={30} className="ml-5"/> : <Menu onClick={toggleNavDown} size={30} className="ml-5"/> )}
       </div>
     </nav>
   );
