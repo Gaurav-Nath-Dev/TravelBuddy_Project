@@ -38,7 +38,7 @@ export const Navbar = () => {
   }, []);
 
   return (
-    <nav className="mt-6 bg-white text-2xl text-gray-700 font-medium m-auto flex justify-between items-center w-[95%]">
+    <nav className="mt-8 bg-white text-2xl text-gray-700 font-medium m-auto flex justify-between items-center w-[95%]">
       <Link><img src={travel_buddy_logo} alt="" className="w-[16rem] min-w-[10rem]"/></Link>
       <div className="">
         {(isOpenNav) ?  

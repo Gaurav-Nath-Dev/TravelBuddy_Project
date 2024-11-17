@@ -21,3 +21,19 @@ html{
 body{
     box-sizing: border-box;
 }
+
+.animetext {
+  text-transform: uppercase;
+  background: linear-gradient(to right, #e55ee7, #8f68ff, #487bff, #8f68ff, #e55ee7);
+  background-size: 200%;
+  background-clip: text;
+  animation: animate-gradient 4.5s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes animate-gradient {
+  to {
+    background-position: 200%;
+  }
+}
