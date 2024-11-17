@@ -12,13 +12,13 @@ const PasswordCriteria = ({ password }) => {
   return (
     <div className="mt-3">
       {criteria.map((item) => (
-        <div key={item.label} className="flex items-center">
+        <div key={item.label} className="flex items-center space-y-1">
           {item.met ? (
-            <Check size={15} color={"#6F85DF"}/>
+            <Check size={13} color={"#6F85DF"}/>
           ) : (
-            <X size={15}/>
+            <X size={13} className="mt-1"/>
           )}
-          <span className={`ml-3 text-xs ${item.met ? "text-blue_main" : "text-grey-500"}`}>{item.label}</span>
+          <span className={`ml-3 text-base ${item.met ? "text-blue_main" : "text-grey-500"}`}>{item.label}</span>
         </div>
       ))}
     </div>
@@ -45,15 +45,15 @@ export const PasswordStrengthMeter = ({ password }) => {
   const strength = getStrength(password);
 
   return(
-    <div className="mt-7 px-7">
+    <div className="mt-7 mx-10">
       <div className="flex justify-between text-xs">
-        <span>Password strength</span>
-        <span className="text-blue_main">{getStrengthText(strength)}</span>
+        <span className="text-lg font-medium">Password strength</span>
+        <span className="text-lg font-medium text-blue_main">{getStrengthText(strength)}</span>
       </div>
       <div className="flex space-x-1">
         {[...Array(4)].map((_, index) => (
           <div key={index}
-            className={`mt-1 h-[0.2rem] w-1/4 rounded-full
+            className={`mt-1 h-[0.3rem] w-1/4 rounded-full
               ${index < strength ? "bg-blue_main": "bg-gray-400"}  
               `}
           />

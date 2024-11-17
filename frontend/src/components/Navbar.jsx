@@ -21,10 +21,20 @@ export const Navbar = () => {
     toast.success("Successfully Loged Out!");
   }
 
+  const checkWindowWidth = () => {
+    if (window.innerWidth <= 768) {
+      setOpenNav(true);
+    } else {
+      setOpenNav(false);
+    }
+  };
+
   useEffect(() => {
-    window.addEventListener(
-      "resize", () => (window.innerWidth <= 960) ? setOpenNav(true) : setOpenNav(false),
-    );
+    checkWindowWidth();
+    window.addEventListener('resize', checkWindowWidth);
+    return () => {
+      window.removeEventListener('resize', checkWindowWidth);
+    };
   }, []);
 
   return (

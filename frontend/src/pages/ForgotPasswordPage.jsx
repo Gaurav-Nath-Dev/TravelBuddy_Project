@@ -19,16 +19,18 @@ export const ForgotPasswordPage = () => {
 
 	return (
       <section className=" bord flex justify-center h-[100svh] overflow-hidden bg-cloud_planes bg-center bg-no-repeat bg-cover items-center">
-      <motion.div className=" absolute text-center rounded-3xl  w-[25rem] h-fit bg-gray-100 bg-opacity-[.3] backdrop-blur-sm text-gray-500"
+      <motion.div className=" absolute text-center rounded-3xl  w-[35rem] h-fit bg-gray-100 bg-opacity-[.3] backdrop-blur-sm text-gray-500"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y:0 }}
       transition={{ duration: 0.5 }}
       >
-        <img src={travel_buddy_logo} alt="" className="w-[8rem] mt-8 m-auto"/>
-        <h1 className=" mt-4 text-3xl text-gray-700 font-playfair font-black">Forgot Password</h1>
+        <Link to={"/"}>
+        <img src={travel_buddy_logo} alt="" className="w-[13rem] mt-8 m-auto"/>
+         </Link>
+        <h1 className=" mt-4 text-5xl text-gray-700 font-playfair font-black">Forgot Password</h1>
         {(!isSubmitted) ? 
         <form onSubmit={handleSubmit}>
-        <p className="my-4 text-sm">Enter your email address and we'll send you a link to reset your password.</p>
+        <p className="my-4 mx-5 text-lg">Enter your email address and we'll send you a link to reset your password.</p>
           <Input icon = {Mail}
             type = "email"
             placeholder = "Email Address"
@@ -36,13 +38,13 @@ export const ForgotPasswordPage = () => {
             onChange = {(e) => setEmail(e.target.value)}
             />
         <motion.button
-          whileHover={{ scale: 1.02 }}
+          whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.98 }}
-          className="text-white w-[85%] font-medium py-2 my-6 text-xl rounded-xl bg-blue_main"
+          className="text-white w-[85%] font-medium py-4 my-6 text-xl rounded-xl bg-blue_main"
           type="submit"
           disabled={isLoading}
         >
-          {isLoading ? <Loader className="w-6 h-6 animate-spin mx-auto" /> : "Send Reset Link"}
+          {isLoading ? <Loader className="animate-spin mx-auto" size={24}/> : "Send Reset Link"}
         </motion.button>
         </form>
         :
@@ -58,9 +60,9 @@ export const ForgotPasswordPage = () => {
             <p>If an account exits for {email}, you will receive a password reset link shortly.</p>
           </div>
         }
-        <div className="my-4 text-xs flex justify-center">
+        <div className="mb-4 text-lg flex justify-center">
           <Link to={"/login"} className="flex items-center hover:text-blue_main">
-            <ArrowLeft className="h-4 w-4 mr-2" />Back to Login
+            <ArrowLeft size={14} className="mr-2" />Back to Login
           </Link>
         </div>
       </motion.div>

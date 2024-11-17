@@ -26,16 +26,16 @@ export const LogInPage = () => {
     <>
       <section className=" bord flex justify-center h-[100svh] overflow-hidden bg-cloud_planes bg-center bg-no-repeat bg-cover items-center">
       <motion.div 
-      className=" absolute text-center rounded-3xl  w-[25rem] h-fit bg-gray-100 bg-opacity-[.3] backdrop-blur-sm text-gray-500"
+      className=" absolute text-center rounded-3xl  w-[35rem] h-fit bg-gray-100 bg-opacity-[.3] backdrop-blur-sm text-gray-500"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y:0 }}
       transition={{ duration: 0.5 }}
       >
         <Link to={"/"}>
-          <img src={travel_buddy_logo} alt="" className="w-[8rem] mt-8 m-auto"/>
+          <img src={travel_buddy_logo} alt="" className="w-[13rem] mt-8 m-auto"/>
         </Link>
-        <h1 className=" mt-4 text-4xl text-gray-700 font-playfair font-black">Welcome Back!</h1>
-        <p className="mt-1 text-sm">Please enter your details, Your Buddy awaits.</p>
+        <h1 className=" mt-4 text-5xl text-gray-700 font-playfair font-black">Welcome Back!</h1>
+        <p className="mt-1 text-lg">Please enter your details, Your Buddy awaits.</p>
         <form onSubmit={handleLogIn}>
           <Input icon = {Mail}
             type = "text"
@@ -49,19 +49,19 @@ export const LogInPage = () => {
             value = {password}
             onChange = {(e) => setPassword(e.target.value)}
             />
-          <p className="mx-7 mt-3 text-left hover:text-blue_main"><Link to="/forgot-password">Forget Password</Link></p>
-        {error && <p className="mx-7 text-left text-red-500">{error}</p>}
+          <p className="mx-10 mt-3 text-left text-lg hover:text-blue_main"><Link to="/forgot-password">Forget Password ?</Link></p>
+        {error && <p className="ml-10 mt-6 text-lg text-left text-red-500">{error}</p>}
         <motion.button
-          whileHover={{ scale: 1.02 }}
+          whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.98 }}
-          className="text-white w-[85%] font-medium py-2 my-6 text-2xl rounded-xl bg-blue_main"
+          className="text-white w-[85%] font-medium py-4 my-6 text-2xl rounded-xl bg-blue_main"
           type="submit"
           disabled={isLoading}
         >
-          {isLoading ? <Loader className="w-6 h-6 animate-spin mx-auto" /> : "Log In"}
+          {isLoading ? <Loader className="animate-spin mx-auto" size={24} /> : "Log In"}
         </motion.button>
         </form>
-        <p className="text-xs mb-3">Don't have an account?{" "}
+        <p className="text-lg mb-3">Don't have an account?{" "}
           <Link to = {"/signup"} className="text-blue_main">Signup</Link>
         </p>
       </motion.div>
