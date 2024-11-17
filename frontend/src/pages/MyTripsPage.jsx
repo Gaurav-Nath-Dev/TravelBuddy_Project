@@ -1,5 +1,5 @@
-import { Transition } from "../components/Transition"
 import { Navbar } from "../components/Navbar"
+import { Transition } from "../components/Transition"
 
 export const MyTripsPage = () => {
   return (
