@@ -22,7 +22,7 @@ export const Navbar = () => {
   }
 
   const checkWindowWidth = () => {
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth <= 900) {
       setOpenNav(true);
     } else {
       setOpenNav(false);
@@ -40,11 +40,11 @@ export const Navbar = () => {
   return (
     <nav className="mt-6 bg-white text-2xl text-gray-700 font-medium m-auto flex justify-between items-center w-[95%]">
       <Link><img src={travel_buddy_logo} alt="" className="w-[16rem] min-w-[10rem]"/></Link>
-      <div>
+      <div className="">
         {(isOpenNav) ?  
-        <ul className=" absolute mt-10 mx-7 left-0 text-center space-y-1 w-full gap-8">
+        <ul className=" absolute mt-10 mx-7 left-0 bg-white text-center space-y-1 w-full gap-8">
           <li className="hover:bg-gray-200 p-4 rounded-xl duration-500"><Link to={"/"}>Home</Link></li>
-          <li className="hover:bg-gray-200 p-4 rounded-xl duration-500"><Link to={"/explore"}>Explore</Link></li>
+          <li className="hover:bg-gray-200 p-4 rounded-xl duration-500"><Link to={"/explore"} >Explore</Link></li>
           <li className="hover:bg-gray-200 p-4 rounded-xl duration-500"><Link to={"/my-trips"}>My Trips</Link></li>
           <li className="hover:bg-gray-200 p-4 rounded-xl duration-500"><Link to={"/community"}>Community</Link></li>
         </ul>
@@ -97,7 +97,7 @@ export const Navbar = () => {
           </>
         }
         </div>
-        {openNav && (<Menu onClick={toggleNavDown}/>)}
+        {openNav && (<Menu onClick={toggleNavDown} className="ml-5"/>)}
       </div>
     </nav>
   );
