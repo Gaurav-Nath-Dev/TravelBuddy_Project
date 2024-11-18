@@ -60,7 +60,7 @@ export const EmailVerificationPage = () => {
 
   return (
     <>
-      <section className=" bord flex justify-center h-[100svh] overflow-hidden bg-cloud_planes bg-center bg-no-repeat bg-cover">
+      <section className="flex justify-center h-[100svh] overflow-hidden bg-cloud_planes bg-center bg-no-repeat bg-cover">
       <motion.div 
       initial={{ opacity: 0, y: -50}}
       animate={{ opacity:1, y:0 }}
