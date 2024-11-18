@@ -38,18 +38,18 @@ export const Navbar = () => {
   }, []);
 
   return (
-    <nav className="mt-8 p-8 rounded-3xl bg-white bg-transparent text-3xl text-gray-700 font-semibold m-auto flex justify-between items-center w-[95%]">
+    <nav className="mt-8 p-8 rounded-3xl bg-white bg-transparent text-gray-700 font-semibold m-auto flex justify-between items-center w-[95%]">
       <Link><img src={travel_buddy_logo} alt="" className="w-[16rem] min-w-[10rem]"/></Link>
       <div className="">
         {(isOpenNav) ?  
-        <ul className="absolute h-[90svh] mt-10 left-0 bg-white text-center space-y-[5rem] w-full gap-8">
+        <ul className="absolute h-[90svh] mt-10 left-0 text-3xl bg-white text-center space-y-[5rem] w-full gap-8">
           <li className="hover:bg-gray-200 p-4 rounded-xl duration-500"><Link to={"/"}>Home</Link></li>
           <li className="hover:bg-gray-200 p-4 rounded-xl duration-500"><Link to={"/explore"} >Explore</Link></li>
           <li className="hover:bg-gray-200 p-4 rounded-xl duration-500"><Link to={"/my-trips"}>My Trips</Link></li>
           <li className="hover:bg-gray-200 p-4 rounded-xl duration-500"><Link to={"/community"}>Community</Link></li>
         </ul>
       :
-        <ul className={"gap-20 "+(openNav ? "hidden":"flex" )}>
+        <ul className={"gap-20 text-3xl "+(openNav ? "hidden":"flex" )}>
           <li className="hover:border-b-2 hover:border-blue_main py-3"><Link to={"/"}>Home</Link></li>
           <li className="hover:border-b-2 hover:border-blue_main py-3"><Link to={"/explore"}>Explore</Link></li>
           <li className="hover:border-b-2 hover:border-blue_main py-3"><Link to={"/my-trips"}>My Trips</Link></li>
@@ -57,7 +57,7 @@ export const Navbar = () => {
         </ul> 
       }
       </div>
-      <div className="flex items-center">
+      <div className="flex items-center text-2xl">
         <div>
           {(isAuthenticated) ? 
           <>
